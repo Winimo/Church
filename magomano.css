@@ -1,0 +1,930 @@
+html, body{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+body {
+    padding-top: 90px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/istockphoto-879917312-612x612 copy.webp');
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+.favicon{
+    height: 80px;
+    width: 80px;
+}
+.navbar h6{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: #1b25b9;
+}
+.navbar .nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.navbar .nav-links a{
+    color: #080808;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+.navbar .nav-links a:hover{
+    color: fuchsia;
+}
+.navbar-toggle{
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.navbar-toggle span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #6860ce;
+    box-shadow: 0px 8px 16px 0px rgba(48, 93, 177, 0.2);
+    border-radius: 2px;
+}
+.nav-toggle-input{
+    display: none;
+}
+.home-active{
+    background-color: #6860ce;
+    border-radius: 5px;
+}
+.about-us-active{
+    background-color: #6860ce;
+    border-radius: 5px;
+}
+.ministries-active{
+    background-color: #6860ce;
+    border-radius: 5px;
+}
+.contact-active{
+    background-color: #6860ce;
+    border-radius: 5px;
+}
+.giving-active{
+    background-color: #6860ce;
+    border-radius: 5px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #6860ce;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(48, 93, 177, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover { 
+    background-color: #ddd;
+ }
+.dropdown:hover .dropdown-content { 
+    display: block;
+ }
+.welcome{
+    font-size: 50px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+.Theme{
+    background-color: #7770d6;
+    text-align: center;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    max-width: 48rem;  
+    margin: 100px auto;  
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 70px;
+    padding: 10px; 
+}
+.home-ministry0{
+    display: flex;
+    overflow: hidden;
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.home-ministry0::-webkit-scrollbar {
+    display: none;
+}
+.home-ministry{
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 30px;
+    gap: 24px;
+    margin-left: 0;
+    padding: 0 20px 10px;
+    width: max-content;
+    min-width: max-content;
+    animation: carousel-rotate 30s linear infinite;
+}
+
+@keyframes carousel-rotate {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.image-home-ministry{
+    height: 200px;
+    width: 100%
+}
+.home-pillars,
+.home-esthers,
+.home-over,
+.home-child,
+.home-praise,
+.home-usher,
+.home-hos,
+.home-media {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 245, 245);
+    height: 550px;
+    width: 320px;
+    flex: 0 0 320px;
+    padding: 16px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+#services{
+    font-size: 30px; 
+    color: black;
+    background-color: #7770d6;
+    gap: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: fit-content;
+    margin: 100px auto;  
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding: 30px;  
+    flex-direction: column; 
+}
+#services h2{
+    text-align: center;
+}
+.services-content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 200px;
+}
+.services-content .services1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services-content .services2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sermons{
+    font-size: 30px; 
+    color: black;
+    background-color: rgb(248, 245, 245);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 20px; 
+    align-items: flex-start;
+}
+#sermons h2{
+    text-align: center;
+}
+.sermons-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+.sermons-content .sermons-content-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sermons-content .sermons-content-text .sermons-list-btn{
+    background-color: fuchsia;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.map{
+    margin-bottom: 100px;
+}
+.about-us{
+    color: white;
+    font-size: 100px;
+    margin-bottom: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.vision-mission{
+    text-align: center;
+}
+.vision{
+    background-color: rgb(248, 245, 245);
+    font-size: 30px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    color: black;
+    display: inline-block;
+}
+.vision-mission2{
+    text-align: center;
+}
+.mission{
+    background-color: rgb(248, 245, 245);
+    color: #000;
+    padding: 20px 80px 20px 80px;
+    font-size: 30px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    display: inline-block;
+}
+.core-values{
+    text-align: center;
+}
+.core{
+    background-color: #7770d6;
+    color: #000;
+    padding: 20px 80px 20px 80px;
+    font-size: 30px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    display: inline-block;
+}
+.core li{
+    text-align: left;
+    color: blue;
+}
+.core p{
+    text-align: left;
+}
+.giving{
+    color: white;
+    font-size: 100px;
+    margin-top: 90px;
+    padding: 70px;
+    text-align: center; 
+}
+.strong{
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #7770d6;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 20px auto;  
+    margin-bottom: 100px;
+    font-size: 25px;  
+    flex-direction: column; 
+}
+.heart{
+    background-color: rgb(248, 245, 245);
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: fit-content;
+    margin: 20px auto;  
+    font-size: 25px;
+    margin-bottom: 100px;
+    flex-direction: column; 
+}
+.mpesa{
+    display: flex;
+    padding: 20px;
+    border: grey solid 1px;
+    flex-direction:column;
+    justify-content: space-around;
+}
+.contact-us{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.communicate h2{
+    text-align: center;
+    font-size: 50px;
+}
+.communicate p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.phone{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+    font-size: 20px;
+}
+.contacts-phone{
+    background-color: rgb(248, 245, 245);
+    display: flex;
+    flex-direction:column;
+    align-self: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    column-gap: 30px;
+    text-align: center;  
+}
+.contacts-phone p{
+    text-align: left;
+    font-size: 25px;
+}
+.contact-email{
+    background-color: rgb(248, 245, 245);
+    display: flex;
+    flex-direction:column;
+    align-self: center;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 50px;
+    column-gap: 30px; 
+}
+.contact-email p{
+    font-size: 30px;
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 245, 245);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 50px;
+    column-gap: 30px;
+    text-align: center; 
+}
+.fb{
+    text-decoration: none;
+    font-size: 25px;
+}
+.yt{
+    text-decoration: none;
+    font-size: 25px;
+}
+.map-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.write-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #7770d6;
+    padding: 0 40px 60px 40px;
+    border-radius: 50px;
+    margin-bottom: 100px;
+}
+.write-form h3{
+    text-align: center;
+}
+.fieldset{
+    margin-bottom: 25px;
+}
+.first-name1{
+    font-size: 25px;
+}
+.first-name{
+    width: 370px;
+    height: 40px;
+}
+.last-name1{
+    font-size: 25px;
+}
+.last-name{
+    width: 370px;
+    height: 40px;
+}
+.email-name1{
+    font-size: 25px;
+}
+.email-name{
+    width: 370px;
+    height: 40px;
+}
+.subject1{
+    font-size: 25px;
+}
+.subject{
+    width: 370px;
+    height: 40px;
+}
+.message1{
+    font-size: 25px;
+}
+.message{
+    width: 370px;
+    height: 150px;
+}
+.submit-btn{
+    width: 100px;
+    height: 50px; 
+    display: block;
+    margin: 0 auto;
+    font-size: 25px;
+}
+.image-phone{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}
+.image-fb{
+    height: 50px;
+    width: 50px;
+}
+.image-youtube{
+    height: 50px;
+    width: 70px;
+}
+.image-email{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 70px;
+}
+.prayer{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.prayer.request-form{
+    text-align: center;
+    padding: 20px 10px 30px;
+}
+.prayer1{
+    color: black;
+    font-size: 30px;
+    margin-top: 0px;
+}
+.prayer-fieldset{
+    background-color: rgb(248, 245, 245);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 50px;
+    width: min(100%, 480px);
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.prayer-name{
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.prayer-name1,
+.prayer-message1{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.prayer-name1{
+    height: 44px;
+}
+.prayer-message{
+    font-size: 30px;
+}
+.prayer-message1{
+    min-height: 140px;
+    resize: vertical;
+}
+.prayer-button{
+    width: 100px;
+    height: 50px; 
+    display: block;
+    margin: 0 auto;
+    font-size: 25px;
+}
+.pastoral{
+    color: white;
+    font-size: 100px;
+    margin-top: 20px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.baby{
+    margin-top: 0px;
+    color: black;
+}
+.baby h2{
+    font-size: 50px;
+    text-align: center;
+}
+.baby p{
+    font-size: 30px;
+}
+.prem{
+    color: white;
+    font-size: 100px;
+    margin-top: 20px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.premarital-fieldset{
+    background-color: rgb(248, 245, 245);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.preagree{
+    display: flex;
+    flex-direction: row;
+}
+.precheck{
+    font-size: 20px;
+}
+.premessage{
+    width: 1255px;
+    height: 250px;
+}
+.pillars{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.pillars1 {
+    font-size: 30px;
+}
+.Esthers{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.Esthers1{
+    font-size: 30px;
+}
+.overcomers{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.overcomers1{
+    font-size: 30px;
+}
+.child{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.child1{
+    font-size: 30px;
+}
+.hos{
+    color: white;
+    font-size: 100px;
+    margin-top: 20px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.hos1{
+    font-size: 30px;
+}
+.usher{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.usher1{
+    font-size: 30px;
+}
+.praise{
+    color: white;
+    font-size: 100px;
+    margin-top: 20px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.praise1{
+    font-size: 30px;
+}
+.media{
+    color: white;
+    font-size: 100px;
+    margin-top: 80px;
+    padding: 200px 90px 70px 90px;
+    text-align: center;
+}
+.media1{
+    font-size: 30px;
+}
+.email{
+    color: red;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    column-gap: 25px;  
+    color: white;
+    text-decoration: none;
+    justify-content: space-around;
+    background-color: #6860ce;
+}
+.form1{
+    color: white;
+}
+.form2 p{
+    display: flex;
+    align-items: center;
+}
+.phoneb{
+    height: 50px;
+    width: 50px;
+}
+.emailb{
+    height: 50px;
+    width: 50px;
+}
+.fieldset{
+    background-color: aliceblue;
+    color: black;
+}
+.form3 a{
+    color: white;
+    text-decoration: none;
+}
+.form3 a:hover{
+    color: fuchsia;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px 15px;
+        padding: 10px 12px;
+    }
+    
+    .header{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('istockphoto-879917312-612x612 copy.webp');
+        background-position: center;
+        background-size: cover; 
+        background-repeat: no-repeat;
+    }
+    
+    .navbar h6 {
+        font-size: 12px;
+        line-height: 1.3;
+        margin: 0;
+        flex: 1;
+    }
+
+    .favicon {
+        height: 36px;
+        width: 36px;
+        flex-shrink: 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-toggle-input:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .navbar .nav-links a {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+
+    .welcome,
+    .about-us,
+    .ministry,
+    .giving,
+    .contact-us,
+    .prayer,
+    .pillars,
+    .Esthers,
+    .overcomers,
+    .child,
+    .hos,
+    .usher,
+    .praise,
+    .media {
+        font-size: clamp(2rem, 6vw, 3rem);
+        padding: 80px 20px 40px;
+        margin-top: 10px;
+    }
+
+    .prayer {
+        padding: 100px 16px 30px;
+    }
+
+    .prayer.request-form {
+        padding: 10px 8px 24px;
+    }
+
+    .prayer-fieldset {
+        width: 100%;
+        border-radius: 24px;
+        padding: 16px;
+    }
+
+    .prayer-name,
+    .prayer-message {
+        font-size: 22px;
+    }
+
+    .prayer-button {
+        width: 100%;
+        max-width: 140px;
+        font-size: 18px;
+        padding: 10px 12px;
+        height: auto;
+    }
+
+    .Theme,
+    #services,
+    .strong,
+    .heart,
+    .ministries .ministries-list,
+    .vision,
+    .mission,
+    .core,
+    .write-form,
+    .prayer-fieldset {
+        width: calc(100% - 20px);
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .home-ministry0 {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .home-ministry {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        margin-left: 0;
+        padding: 0 10px 4px;
+        width: max-content;
+    }
+
+    .home-pillars,
+    .home-esthers,
+    .home-over,
+    .home-child,
+    .home-praise,
+    .home-usher,
+    .home-hos,
+    .home-media {
+        width: min(82vw, 320px);
+        max-width: 82vw;
+        height: auto;
+        min-height: 260px;
+        padding: 20px;
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+    }
+
+    .services-content,
+    .sermons-content,
+    .map-form,
+    .phone,
+    .form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sermons-content iframe,
+    .map iframe,
+    iframe {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .first-name,
+    .last-name,
+    .email-name,
+    .subject,
+    .message,
+    .prayer-name1 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form {
+        padding: 20px;
+    }
+}
+
+.footer{
+    text-align: center;
+}
